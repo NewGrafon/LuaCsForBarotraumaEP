@@ -1,5 +1,7 @@
 # LuaCsForBarotrauma Enhanced Performence Project
 
+NewGrafon Changes: set hardcoded tickrate 30 instead of 60
+
 > ⚠ **Warning：** This release is only available for server-side use and is not recommended to run on the client. Make sure that compatibility is adequately tested before deployment.
 
 This is a LuaCsForBarotrauma modification that adds Multi-Thread and Multi-Core support.
