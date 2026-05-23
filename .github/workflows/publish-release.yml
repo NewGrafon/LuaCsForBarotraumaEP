@@ -224,7 +224,6 @@ jobs:
         id: resolve_sha
         run: |
           sha=$(git ls-remote "https://github.com/${{ github.repository }}.git" "${{ inputs.target }}" | awk '{print $1}')
-          # Если inputs.target уже является SHA (не нашлось в refs), используем как есть
           if [ -z "$sha" ]; then
             sha="${{ inputs.target }}"
           fi
@@ -233,7 +232,7 @@ jobs:
       - name: Publish release
         uses: notpeelz/action-gh-create-release@c1bebd17c8a128e8db4165a68be4dc4e3f106ff1 # v5.0.1
         with:
-          target: ${{ inputs.target }}
+          target: ${{ steps.resolve_sha.outputs.sha }}
           tag: ${{ inputs.tag }}
           prerelease: ${{ inputs.prerelease }}
           strategy: replace
