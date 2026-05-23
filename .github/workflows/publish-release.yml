@@ -221,7 +221,7 @@ jobs:
           done
 
       - name: Publish release
-        uses: notpeelz/action-gh-create-release@c1bebd17c8a128e8db4165a68be4dc4e3f106ff1 # v5.0.1
+        uses: softprops/action-gh-release@v2
         with:
           target: ${{ inputs.target }}
           tag: ${{ inputs.tag }}
