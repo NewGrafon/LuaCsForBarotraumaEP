@@ -92,6 +92,9 @@ env:
     mscordaccore_amd64_amd64_*
     LocalMods/LuaCsForBarotrauma
 
+permissions:
+  contents: write
+
 jobs:
   build:
     uses: ./.github/workflows/build.yml
