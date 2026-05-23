@@ -414,14 +414,14 @@ namespace Barotrauma.Networking
             set;
         }
 
-        public const int DefaultTickRate = 20;
+        public const int DefaultTickRate = 30;
 
         private int tickRate = DefaultTickRate;
         [Serialize(DefaultTickRate, IsPropertySaveable.Yes)]
         public int TickRate
         {
             get { return tickRate; }
-            set { tickRate = MathHelper.Clamp(value, 1, 60); }
+            set { tickRate = MathHelper.Clamp(value, 1, 30); }
         }
 
         private int maxLagCompensation = 150;

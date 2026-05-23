@@ -114,11 +114,11 @@ namespace Barotrauma
         public PerformanceMonitor() 
         {
             PM = this;
-            RealTickRate = 60;
+            RealTickRate = 30;
             TotalTicks = 0;
-            LastSecondTicks = 60;
-            TickRateLow = 60;
-            TickRateHigh = 60;
+            LastSecondTicks = 30;
+            TickRateLow = 30;
+            TickRateHigh = 30;
             PMStopwatch.Start();
         }
 
@@ -140,8 +140,8 @@ namespace Barotrauma
             if (TotalTimeElapsed - 60000 >= tickrate60stimer)
             {
                 GameServer.Log(PM.ToString(), ServerLog.MessageType.ServerMessage);
-                TickRateLow = 60;
-                TickRateHigh = 60;
+                TickRateLow = 30;
+                TickRateHigh = 30;
                 tickrate60stimer = TotalTimeElapsed;
             }
             if (RealTickRate > TickRateHigh)

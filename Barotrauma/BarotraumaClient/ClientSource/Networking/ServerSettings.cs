@@ -175,7 +175,7 @@ namespace Barotrauma.Networking
             GameClient.SetLobbyPublic(IsPublic);
             AllowFileTransfers = incMsg.ReadBoolean();
             incMsg.ReadPadBits();
-            TickRate = incMsg.ReadRangedInteger(1, 60);
+            TickRate = incMsg.ReadRangedInteger(1, 30);
 
             if (requiredFlags.HasFlag(NetFlags.Properties))
             {

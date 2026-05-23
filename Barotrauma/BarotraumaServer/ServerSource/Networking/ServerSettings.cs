@@ -101,7 +101,7 @@ namespace Barotrauma.Networking
             outMsg.WriteBoolean(IsPublic);
             outMsg.WriteBoolean(AllowFileTransfers);
             outMsg.WritePadBits();
-            outMsg.WriteRangedInteger(TickRate, 1, 60);
+            outMsg.WriteRangedInteger(TickRate, 1, 30);
 
             if (requiredFlags.HasFlag(NetFlags.Properties))
             {
